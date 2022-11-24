@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+                   assembly="WpfApplication1" 
+                   namespace="WpfApplication1">
+ 
+  <!-- more mapping info here -->
+  <class name="ContactInfo" table="ContactInfo">
+    <id name="ContactId">
+      <generator class="identity" />
+    </id>
+    <property name="FirstName" />
+    <property name="LastName" />
+    <property name="Age" />
+    <property name="Mobile" />
+  </class>
+</hibernate-mapping>
