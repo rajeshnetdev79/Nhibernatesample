@@ -19,9 +19,7 @@ using System.Windows.Shapes;
 
 namespace WpfApplication1
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+  
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -55,10 +53,10 @@ namespace WpfApplication1
                         }
                         else
                         {
-                            session.Update(conInfo); //update the new data 
-                            transaction.Commit(); //commit the data 
+                            session.Update(conInfo); 
+                            transaction.Commit();
                             MessageBox.Show("Contact updated successfully.");
-                            GetContactInfo(); //display the updated record 
+                            GetContactInfo(); 
                         }
                         clearcontrol();
                     }
@@ -125,11 +123,11 @@ namespace WpfApplication1
                         try
                         {
                             var selectedContact = dataGridContact.SelectedItem as ContactInfo;
-                            //ContactInfo contact = session.Get<ContactInfo>(selectedContact.ContactId);
-                            session.Delete(selectedContact); //delete the record 
-                            transaction.Commit(); //commit it 
+                            
+                            session.Delete(selectedContact); 
+                            transaction.Commit(); 
                             MessageBox.Show("Contact deleted successfully.");
-                            GetContactInfo(); //display the new collection 
+                            GetContactInfo(); 
                         }
                         catch (Exception ex)
                         {
